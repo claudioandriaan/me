@@ -6,14 +6,20 @@ body {
 }
 
 /* Header */
-nav {
+.navbar {
     width: 100%;
     margin: 0;
     padding: 5px 0;
     background-color: #0a192f;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Align items vertically centered */
+    align-items: center;
+    /* Align items vertically centered */
+    z-index: 1000;
+    top: 0px;
+    ;
+    transition: top 0.3s;
+    position: fixed;
 }
 
 .logo {
@@ -28,7 +34,7 @@ nav {
 }
 
 nav ul {
-    list-style: none;    
+    list-style: none;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -37,7 +43,8 @@ nav ul {
 }
 
 ul li {
-    position: relative; /* For positioning dropdowns if needed */
+    position: relative;
+    /* For positioning dropdowns if needed */
 }
 
 ul li a {
@@ -58,25 +65,31 @@ ul li a:hover {
 
 .button-1 {
     cursor: pointer;
-    padding: 10px 15px; /* Increased padding for better touch targets */
+    padding: 10px 15px;
+    /* Increased padding for better touch targets */
     color: #3c978d;
     background-color: #0a192f;
     border: 2px solid #55d4c6;
     border-radius: 5px;
-    text-align: center; /* Center text */
-    text-decoration: none; /* Ensure no underline */
+    text-align: center;
+    /* Center text */
+    text-decoration: none;
+    /* Ensure no underline */
 }
 
 .button-2 {
     cursor: pointer;
     width: 150px;
-    padding: 10px 15px; /* Increased padding for better touch targets */
+    padding: 10px 15px;
+    /* Increased padding for better touch targets */
     color: #3c978d;
     background-color: #0a192f;
     border: 2px solid #55d4c6;
     border-radius: 5px;
-    text-align: center; /* Center text */
-    text-decoration: none; /* Ensure no underline */
+    text-align: center;
+    /* Center text */
+    text-decoration: none;
+    /* Ensure no underline */
 }
 
 
@@ -87,10 +100,12 @@ ul li a:hover {
 .close_icon_mobile {
     display: none;
 }
+
 /* Mobile styles */
 @media (max-width: 768px) {
     .navbar-right {
-        display: none; /* Hide the default menu */
+        display: none;
+        /* Hide the default menu */
     }
 
     .navbar-toggle {
@@ -98,7 +113,7 @@ ul li a:hover {
         cursor: pointer;
         padding: 15px;
         color: #ccd6f6;
-        font-size: 20px;    
+        font-size: 20px;
     }
 
     .navbar-menu {
@@ -126,18 +141,20 @@ ul li a:hover {
     .navbar-menu ul li a {
         display: block;
         padding: 18px;
-        align-items: end;        
+        align-items: end;
     }
 
     .navbar-menu.show {
         top: 1px;
         display: flex;
         height: 100vh;
-        
+
     }
+
     .navbar-toggle {
-        display: block; 
+        display: block;
     }
+
     .close_icon_mobile {
         font-weight: bold;
         color: rgb(41, 214, 50);
@@ -148,7 +165,8 @@ ul li a:hover {
 
 /* Toggle button for mobile */
 .navbar-toggle {
-    display: none; /* Hide by default */
+    display: none;
+    /* Hide by default */
 }
 
 /* Show the toggle button on small screens */
@@ -162,7 +180,8 @@ ul li a:hover {
 section {
     height: 100vh;
 }
-.row  {
+
+.row {
     background-color: #0a192f;
     color: #ccd6f6;
     padding: 0;
@@ -171,14 +190,15 @@ section {
     flex-direction: row;
 }
 
-.col-md-2{
+.col-md-2 {
     flex-grow: 1;
     height: 100vh;
     padding: 0px;
     width: 200px;
     margin-top: auto;
 }
-.col-md-8{
+
+.col-md-8 {
     margin-top: 50px;
     margin-left: 30px;
     flex-grow: 8;
@@ -193,18 +213,21 @@ section {
     padding: 0px;
 }
 
-.heading{
+.heading {
     margin: 0px 0px 30px 4px;
-    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;;
+    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    ;
     color: #3c978d;
     font-size: 16px;
 }
+
 .big-heading {
     font-size: 80px;
     margin-top: auto;
     margin-bottom: auto;
 }
-.big2-heading{
+
+.big2-heading {
     font-size: 80px;
     margin-top: auto;
     margin-bottom: auto;
@@ -217,27 +240,31 @@ section {
     font-size: 20px;
 }
 
-@media  (max-width:1075px) {
-    col-md-8{
+@media (max-width:1075px) {
+    col-md-8 {
         margin-top: 30px;
         margin-left: 20px;
     }
-    .col-md-2{
+
+    .col-md-2 {
         height: 100vh;
         margin-right: 10px;
         width: 150px;
     }
-    .heading{
+
+    .heading {
         margin: 0px 0px 10px 1px;
 
         font-size: 14px;
     }
+
     .big-heading {
         font-size: 50px;
         margin-top: auto;
         margin-bottom: auto;
     }
-    .big2-heading{
+
+    .big2-heading {
         font-size: 50px;
         margin-top: auto;
         margin-bottom: auto;
@@ -253,26 +280,30 @@ section {
 
 /* Mobile view */
 
-@media  (max-width:386px) {
+@media (max-width:386px) {
 
-    col-md-8{
+    col-md-8 {
         margin-top: 30px;
         margin-left: 20px;
         align-items: center;
     }
-    .col-md-2{
+
+    .col-md-2 {
         display: none;
     }
-    .heading{
+
+    .heading {
         margin: 0px 0px 10px 1px;
         font-size: 12px;
     }
+
     .big-heading {
         font-size: 20px;
         margin-top: auto;
         margin-bottom: auto;
     }
-    .big2-heading{
+
+    .big2-heading {
         font-size: 20px;
         margin-top: auto;
         margin-bottom: auto;
@@ -287,25 +318,28 @@ section {
 }
 
 
-@media  (min-width:386px) and (max-width:768px) {
+@media (min-width:386px) and (max-width:768px) {
 
-    col-md-8{
+    col-md-8 {
         margin-top: 30px;
         margin-left: 20px;
     }
+
     /* .col-md-2{
         display: none;
     } */
-    .heading{
+    .heading {
         margin: 0px 0px 10px 1px;
         font-size: 14px;
     }
+
     .big-heading {
         font-size: 30px;
         margin-top: auto;
         margin-bottom: auto;
     }
-    .big2-heading{
+
+    .big2-heading {
         font-size: 30px;
         margin-top: auto;
         margin-bottom: auto;
@@ -318,6 +352,7 @@ section {
         font-size: 16px;
     }
 }
+
 /* End mobile view */
 
 /* left site */
@@ -343,24 +378,35 @@ section {
     align-items: center;
     margin-left: 50px;
 }
+
 /* Style for each icon button */
-.social-icon {    
+.social-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px; /* Adjust size as needed */
-    height: 30px; /* Adjust size as needed */
-    margin-bottom: 5px; /* Space between items */
-    color: white; /* Icon color */
-    border-radius: 50%; /* Make it a circle */
-    text-decoration: none; /* Remove underline */
-    font-size: 20px; /* Icon size */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    width: 30px;
+    /* Adjust size as needed */
+    height: 30px;
+    /* Adjust size as needed */
+    margin-bottom: 5px;
+    /* Space between items */
+    color: white;
+    /* Icon color */
+    border-radius: 50%;
+    /* Make it a circle */
+    text-decoration: none;
+    /* Remove underline */
+    font-size: 20px;
+    /* Icon size */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Smooth transitions */
 }
 
 .social-icon:hover {
-    background-color: #3c978d; /* Background color on hover */
-    transform: scale(1.1); /* Slight zoom effect on hover */
+    background-color: #3c978d;
+    /* Background color on hover */
+    transform: scale(1.1);
+    /* Slight zoom effect on hover */
 }
 
 /* Container for the text */
@@ -380,11 +426,16 @@ section {
     display: flex;
     justify-content: end;
     align-items: center;
-    height: 100%; /* Take full height of parent */
-    transform: rotate(-90deg); /* Rotate text to vertical */
-    transform-origin: left bottom; /* Adjust rotation point */
-    white-space: nowrap; /* Prevent text from wrapping */
-    margin-left: -50px; /* Adjust position after rotation (optional) */
+    height: 100%;
+    /* Take full height of parent */
+    transform: rotate(-90deg);
+    /* Rotate text to vertical */
+    transform-origin: left bottom;
+    /* Adjust rotation point */
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    margin-left: -50px;
+    /* Adjust position after rotation (optional) */
 }
 
 .bar-vertical {
@@ -392,17 +443,24 @@ section {
     height: 200px;
     background-color: #ccd6f6;
 }
-.social-media-link  a {
-    text-decoration: none; /* Remove underline */
-    color: #ccd6f6; /* Text color */
-    font-size: 12px; /* Font size */
+
+.social-media-link a {
+    text-decoration: none;
+    /* Remove underline */
+    color: #ccd6f6;
+    /* Text color */
+    font-size: 12px;
+    /* Font size */
 }
 
 
 .vertical-bar {
-    width: 20px; /* Adjust the width as needed */
-    height: 200px; /* Adjust the height as needed */
-    background-color: #3498db; /* Adjust the color as needed */
+    width: 20px;
+    /* Adjust the width as needed */
+    height: 200px;
+    /* Adjust the height as needed */
+    background-color: #3498db;
+    /* Adjust the color as needed */
 }
 
 /* End Landing Page */
@@ -414,9 +472,11 @@ section {
     flex-direction: row;
     gap: 10px;
 }
+
 .about-me {
     font-size: 30px;
-    font-family: SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    font-family: SF Mono', ' Fira Code', ' Fira Mono', ' Roboto Mono', monospace;
+
 }
 
 .about-container {
@@ -427,18 +487,23 @@ section {
 .left-container {
     width: 600px;
 }
+
 .about-desk {
     /* margin: 0px 0px 15px; */
     font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
 }
+
 .about-right {
     flex-grow: 4;
 }
+
 .horizontal-bar {
     width: 300px;
     height: 1px;
-    background-color: #737479; /* You can change the color as needed */
-    margin: 25px 0; /* Optional: Adds some space above and below the bar */
+    background-color: #737479;
+    /* You can change the color as needed */
+    margin: 25px 0;
+    /* Optional: Adds some space above and below the bar */
 }
 
 .about-image {
@@ -448,7 +513,7 @@ section {
     height: 350px;
     margin-left: 50px;
     margin-top: 60px;
-    transition: width  3s;
+    transition: width 3s;
 
 }
 
@@ -466,40 +531,47 @@ section {
 }
 
 
-@media  (max-width:1075px) {
+@media (max-width:1075px) {
     .container {
         padding-top: 60px;
         display: flex;
         flex-direction: row;
         gap: 10px;
     }
+
     .about-me {
         font-size: 25px;
-        font-family: SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+        font-family: SF Mono', ' Fira Code', ' Fira Mono', ' Roboto Mono', monospace;
+
     }
-    
+
     .about-container {
         display: flex;
         gap: 20px;
     }
-    
+
     .left-container {
         width: 500px;
     }
+
     .about-desk {
         /* margin: 0px 0px 15px; */
         font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
     }
+
     .about-right {
         flex-grow: 4;
     }
+
     .horizontal-bar {
         width: 250px;
         height: 1px;
-        background-color: #737479; /* You can change the color as needed */
-        margin: 25px 0; /* Optional: Adds some space above and below the bar */
+        background-color: #737479;
+        /* You can change the color as needed */
+        margin: 25px 0;
+        /* Optional: Adds some space above and below the bar */
     }
-    
+
     .about-image {
         border: 5px solid #000307;
         opacity: 0.9;
@@ -507,16 +579,16 @@ section {
         height: 300px;
         margin-left: 40px;
         margin-top: 50px;
-        transition: width  3s;
-    
+        transition: width 3s;
+
     }
-    
-    
+
+
     .about-image:hover {
         width: 350px;
         opacity: 0.2;
     }
-    
+
     .tools {
         width: 30px;
         height: 30px;
@@ -531,45 +603,53 @@ section {
     }
 
     #Hero {
-        padding-left: 30px ;
+        padding-left: 30px;
     }
+
     .big-heading {
         font-size: 60px;
     }
+
     .big2-heading {
         font-size: 60px;
     }
+
     #about {
-        padding-left: 30px ;
+        padding-left: 30px;
     }
+
     .about-desk {
         font-size: medium;
     }
 }
 
-@media  (max-width:768px) {
+@media (max-width:768px) {
     .col-md-2 {
         display: none;
     }
+
     .container {
         padding-top: 40px;
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
+
     .about-me {
         font-size: 18px;
-        font-family: SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+        font-family: SF Mono', ' Fira Code', ' Fira Mono', ' Roboto Mono', monospace;
+
     }
-    
+
     .about-container {
         display: flex;
         gap: 20px;
     }
-    
+
     .left-container {
         width: 100%;
     }
+
     .about-desk {
         /* margin: 0px 0px 15px; */
         font-size: medium;
@@ -579,10 +659,12 @@ section {
     .horizontal-bar {
         width: 150px;
         height: 1px;
-        background-color: #737479; /* You can change the color as needed */
-        margin: 15px 0; /* Optional: Adds some space above and below the bar */
+        background-color: #737479;
+        /* You can change the color as needed */
+        margin: 15px 0;
+        /* Optional: Adds some space above and below the bar */
     }
-    
+
     .about-image {
         border: 5px solid #000307;
         opacity: 0.9;
@@ -592,13 +674,13 @@ section {
         margin-top: 30px;
         transition: width 3s;
     }
-    
-    
+
+
     .about-image:hover {
         width: 250px;
         opacity: 0.2;
     }
-    
+
     .tools {
         width: 30px;
         height: 30px;
@@ -606,4 +688,70 @@ section {
         cursor: pointer;
     }
 }
+
 /* End About */
+
+
+/* Experience */
+.experience-section {
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    padding-left: 30px;
+}
+
+.horizontal-bar-exp {
+    margin-top: 15px;
+    width: 300px;
+    height: 1px;
+    background-color: #737479;
+}
+
+.enterprise-list {
+
+    width: 25%;
+    margin-left: 80px;
+}
+
+.enterprise-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.enterprise-list li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.enterprise-list li:hover {
+    background-color: #0a244d;
+}
+
+.description-display {
+    width: 70%;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+}
+
+.description {
+    display: none;
+}
+
+.description.active {
+    display: block;
+}
+
+.liste-icon {
+    color: #3c978d;
+    margin-right: 10px;
+}
+
+dd {
+    width: 80%;
+    height: auto;
+}
+
+dd {
+    margin-bottom: 10px;
+}

@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <div class="navbar-left">
                 <a href="#"><img src="assets/logo.PNG" class="logo" alt="logo"></a>
             </div>
@@ -86,7 +86,7 @@
                             <div class="horizontal-bar"></div>
                         </div>
                         <p class="about-desk">
-                            Hello! My name is Brittany and I enjoy creating things that live on the internet. My
+                            Hello! My name is Claudio and I enjoy creating things that live on the internet. My
                             interest in web development started back in 2012 when I decided to try editing custom Tumblr
                             themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
                             <br>
@@ -113,51 +113,84 @@
                         </div>
                     </div>
                     <div class="about-right">
-                        <img class="about-image" src="assets/team.jpg" alt="picture">
+                        <img class="about-image" src="assets/team-2.jpg" alt="picture">
                     </div>
 
                 </div>
             </section>
             <!-- Experience Page -->
-            <section id="experiences">
-                <div class="container">
-                    <div class="left-container">
-                        <div class="about-container">
-                            <div class="about-me"><span class="chiffre">02. </span>Where I’ve Worked</div>
-                            <div class="horizontal-bar"></div>
-                        </div>
-                        <p class="about-desk">
-                            Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-                            interest in web development started back in 2012 when I decided to try editing custom Tumblr
-                            themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
-                            <br>
-                            Fast-forward to today, and I’ve had the privilege of working at an advertising agency, a
-                            start-up, a huge corporation, and a student-led design studio. My main focus these days is
-                            building accessible, inclusive products and digital experiences at Upstatement for a variety
-                            of clients.
-                            <br>
-                            I also recently launched a course that covers everything you need to build a web app with
-                            the Spotify API using Node & React.
-                            <br>
-                            Here are a few technologies I’ve been working with recently:
-                            <br>
-                        </p>
-                        <br>
-                        <div class="tools-about">
-                            <i class="tools fa-brands fa-react"></i>
-                            <i class="tools fa-brands fa-python"></i>
-                            <i class="tools fa-brands fa-node-js"></i>
-                            <i class="tools fa-brands fa-gitlab"></i>
-                            <i class="tools fa-brands fa-github"></i>
-                            <i class="tools fa-solid fa-database"></i>
-
-                        </div>
-                    </div>
-                    <div class="about-right">
-                        <img class="about-image" src="assets/team.jpg" alt="picture">
-                    </div>
-
+            <section id="experience">
+                <div class="about-container">
+                    <div class="exp-me"><span class="chiffre">02. </span>Where I’ve Worked</div>
+                    <div class="horizontal-bar-exp"></div>
                 </div>
+                <div class="experience-section">
+                    <div class="enterprise-list">
+                        <ul>
+                            <li data-description="desc1" onclick="showDescription(this)">Autobiz</li>
+                            <li data-description="desc2" onclick="showDescription(this)">Immobilier Conseil Gestion</li>
+                            <li data-description="desc3" onclick="showDescription(this)">Mediathèque</li>
+                        </ul>
+                    </div>
+                    <div class="description-display">
+                        <div id="desc1" class="description active">
+                            <h2>Web Scraping Developer <a class="chiffre" href="https://autobiz.com">@Autobiz</a>
+                            </h2>
+                            <small>May 2022 -present</small>
+                            <dl>
+                                <dd><i class="fa-solid fa-angles-right liste-icon"></i> Develop and maintain automated
+                                    scraping tools to efficiently extract data from diverse websites</dd>
+                                <dd><i class="fa-solid fa-angles-right liste-icon "></i> Create and implement data
+                                    extraction strategies that prioritize accuracy, relevance, and reliability of the
+                                    collected information.</dd>
+                                <dd><i class="fa-solid fa-angles-right liste-icon"></i>Optimize and troubleshoot
+                                    scraping scripts to enhance performance, ensuring minimal errors and fast execution.
+                                </dd>
+                                <dd><i class="fa-solid fa-angles-right liste-icon"></i>Clean and process raw data to
+                                    guarantee high-quality, structured, and consistent datasets ready for analysis and
+                                    reporting.</dd>
+                                <dd><i class="fa-solid fa-angles-right liste-icon"></i>Collaborate with analysts to
+                                    deliver precise data extractions and generate actionable insights.</dd>
+                            </dl>
+                        </div>
+                        <div id="desc3" class="description">
+                            <h2>Web Developer</h2>
+                            <small>June. 2021 – August. 2021</small>
+                            <small> <span class="chiffre"> | </span>Creation of Library Management system:</small>
+                            <dl>
+                                <dd><i class="fa-solid fa-angles-right liste-icon"></i> Needs analysis</dd>
+                                <dd><i class="fa-solid fa-angles-right liste-icon"></i> Database design</dd>
+                                <dd><i class="fa-solid fa-angles-right liste-icon"></i> Development of the user
+                                    interface.</dd>
+                                <dd><i class="fa-solid fa-angles-right liste-icon"></i> Implementation of the main
+                                    functionalities.</dd>
+                                <dd><i class="fa-solid fa-angles-right liste-icon"></i> Testing and debugging.</dd>
+                                <dd><i class="fa-solid fa-angles-right liste-icon"></i> Staff training.</dd>
+                            </dl>
+                        </div>
+                        <div id="desc2" class="description">
+                            <h2>Web Developer</h2>
+                            <small>September. 2021 - January. 2022</small>
+                            <small> <span class="chiffre"> | </span>Creation application for Human Resources
+                                Management</small>
+                            <dl>
+                                <dd><i class="fa-solid fa-angles-right liste-icon"></i> Analyzed requirements and
+                                    defined system functionalities for human resources management.</dd>
+                                <dd><i class="fa-solid fa-angles-right liste-icon"></i> Designed and implemented the
+                                    database schema to manage employee records, payroll, and performance evaluations.
+                                </dd>
+                                <dd><i class="fa-solid fa-angles-right liste-icon"></i> Developed a responsive user
+                                    interface for seamless interaction and user experience.</dd>
+                                <dd><i class="fa-solid fa-angles-right liste-icon"></i> Implemented key functionalities
+                                    including employee onboarding, leave management, and performance tracking.</dd>
+                                <dd><i class="fa-solid fa-angles-right liste-icon"></i>Conducted user training and
+                                    provided documentation for effective system use.</dd>
+                                <dd><i class="fa-solid fa-angles-right liste-icon"></i> Testing and debugging.</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+
             </section>
 
         </div>
