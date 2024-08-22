@@ -1,0 +1,609 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+    background-color: #0a192f;
+}
+
+/* Header */
+nav {
+    width: 100%;
+    margin: 0;
+    padding: 5px 0;
+    background-color: #0a192f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically centered */
+}
+
+.logo {
+    height: auto;
+    width: 100px;
+    padding-left: 30px;
+    padding-top: 15px;
+}
+
+.navbar-right {
+    padding: 5px 24px;
+}
+
+nav ul {
+    list-style: none;    
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 15px 20px;
+    padding-right: 50px;
+}
+
+ul li {
+    position: relative; /* For positioning dropdowns if needed */
+}
+
+ul li a {
+    text-decoration: none;
+    color: #ccd6f6;
+    padding: 18px;
+    font-size: 15px;
+}
+
+ul li a:hover {
+    color: #3c978d;
+}
+
+.chiffre {
+    color: #3c978d;
+    font-weight: bold;
+}
+
+.button-1 {
+    cursor: pointer;
+    padding: 10px 15px; /* Increased padding for better touch targets */
+    color: #3c978d;
+    background-color: #0a192f;
+    border: 2px solid #55d4c6;
+    border-radius: 5px;
+    text-align: center; /* Center text */
+    text-decoration: none; /* Ensure no underline */
+}
+
+.button-2 {
+    cursor: pointer;
+    width: 150px;
+    padding: 10px 15px; /* Increased padding for better touch targets */
+    color: #3c978d;
+    background-color: #0a192f;
+    border: 2px solid #55d4c6;
+    border-radius: 5px;
+    text-align: center; /* Center text */
+    text-decoration: none; /* Ensure no underline */
+}
+
+
+.button-1:hover {
+    color: #5cebda;
+}
+
+.close_icon_mobile {
+    display: none;
+}
+/* Mobile styles */
+@media (max-width: 768px) {
+    .navbar-right {
+        display: none; /* Hide the default menu */
+    }
+
+    .navbar-toggle {
+        display: block;
+        cursor: pointer;
+        padding: 15px;
+        color: #ccd6f6;
+        font-size: 20px;    
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: row;
+        position: absolute;
+        right: 0;
+        background-color: #0a192f;
+        width: 200px;
+        text-align: center;
+        padding: 0;
+    }
+
+    .navbar-menu ul {
+        padding: 15px;
+        margin: 6px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .navbar-menu ul li {
+        margin-bottom: 10px;
+    }
+
+    .navbar-menu ul li a {
+        display: block;
+        padding: 18px;
+        align-items: end;        
+    }
+
+    .navbar-menu.show {
+        top: 1px;
+        display: flex;
+        height: 100vh;
+        
+    }
+    .navbar-toggle {
+        display: block; 
+    }
+    .close_icon_mobile {
+        font-weight: bold;
+        color: rgb(41, 214, 50);
+        margin-bottom: 70px;
+
+    }
+}
+
+/* Toggle button for mobile */
+.navbar-toggle {
+    display: none; /* Hide by default */
+}
+
+/* Show the toggle button on small screens */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block;
+    }
+}
+
+/* Landing Page */
+section {
+    height: 100vh;
+}
+.row  {
+    background-color: #0a192f;
+    color: #ccd6f6;
+    padding: 0;
+    margin: -1px;
+    display: flex;
+    flex-direction: row;
+}
+
+.col-md-2{
+    flex-grow: 1;
+    height: 100vh;
+    padding: 0px;
+    width: 200px;
+    margin-top: auto;
+}
+.col-md-8{
+    margin-top: 50px;
+    margin-left: 30px;
+    flex-grow: 8;
+    /* /* display: flex; */
+    /* -webkit-box-pack: center;
+    justify-content: center; */
+    /* -webkit-box-align: center;  */
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+    height: 100vh;
+    padding: 0px;
+}
+
+.heading{
+    margin: 0px 0px 30px 4px;
+    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;;
+    color: #3c978d;
+    font-size: 16px;
+}
+.big-heading {
+    font-size: 80px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.big2-heading{
+    font-size: 80px;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #b1b4bf;
+}
+
+.desc {
+    width: 600px;
+    margin-bottom: 43px;
+    font-size: 20px;
+}
+
+@media  (max-width:1075px) {
+    col-md-8{
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+    .col-md-2{
+        height: 100vh;
+        margin-right: 10px;
+        width: 150px;
+    }
+    .heading{
+        margin: 0px 0px 10px 1px;
+
+        font-size: 14px;
+    }
+    .big-heading {
+        font-size: 50px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .big2-heading{
+        font-size: 50px;
+        margin-top: auto;
+        margin-bottom: auto;
+        color: #b1b4bf;
+    }
+
+    .desc {
+        width: 500px;
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+}
+
+/* Mobile view */
+
+@media  (max-width:386px) {
+
+    col-md-8{
+        margin-top: 30px;
+        margin-left: 20px;
+        align-items: center;
+    }
+    .col-md-2{
+        display: none;
+    }
+    .heading{
+        margin: 0px 0px 10px 1px;
+        font-size: 12px;
+    }
+    .big-heading {
+        font-size: 20px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .big2-heading{
+        font-size: 20px;
+        margin-top: auto;
+        margin-bottom: auto;
+        color: #b1b4bf;
+    }
+
+    .desc {
+        width: 200px;
+        margin-bottom: 18px;
+        font-size: 13px;
+    }
+}
+
+
+@media  (min-width:386px) and (max-width:768px) {
+
+    col-md-8{
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+    /* .col-md-2{
+        display: none;
+    } */
+    .heading{
+        margin: 0px 0px 10px 1px;
+        font-size: 14px;
+    }
+    .big-heading {
+        font-size: 30px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .big2-heading{
+        font-size: 30px;
+        margin-top: auto;
+        margin-bottom: auto;
+        color: #b1b4bf;
+    }
+
+    .desc {
+        width: 300px;
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+}
+/* End mobile view */
+
+/* left site */
+/* Container for the social media bar */
+
+.social-media-bar {
+    margin-left: 80px;
+    position: fixed;
+    height: 200px;
+    bottom: 0;
+    width: 20px;
+    margin-left: auto;
+    align-items: center;
+    background-color: #ccd6f6;
+}
+
+/* Styles for social media icons */
+.social-media {
+    position: fixed;
+    bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
+}
+/* Style for each icon button */
+.social-icon {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    margin-bottom: 5px; /* Space between items */
+    color: white; /* Icon color */
+    border-radius: 50%; /* Make it a circle */
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Icon size */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.social-icon:hover {
+    background-color: #3c978d; /* Background color on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Container for the text */
+.right-side {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: right;
+    align-items: flex-end;
+    height: 100vh;
+    position: fixed;
+    bottom: 41px;
+    margin-left: 140px;
+}
+
+/* Styling for the social media link */
+.social-media-link {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100%; /* Take full height of parent */
+    transform: rotate(-90deg); /* Rotate text to vertical */
+    transform-origin: left bottom; /* Adjust rotation point */
+    white-space: nowrap; /* Prevent text from wrapping */
+    margin-left: -50px; /* Adjust position after rotation (optional) */
+}
+
+.bar-vertical {
+    width: 2px;
+    height: 200px;
+    background-color: #ccd6f6;
+}
+.social-media-link  a {
+    text-decoration: none; /* Remove underline */
+    color: #ccd6f6; /* Text color */
+    font-size: 12px; /* Font size */
+}
+
+
+.vertical-bar {
+    width: 20px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+    background-color: #3498db; /* Adjust the color as needed */
+}
+
+/* End Landing Page */
+
+/* About  */
+.container {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.about-me {
+    font-size: 30px;
+    font-family: SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+}
+
+.about-container {
+    display: flex;
+    gap: 26px;
+}
+
+.left-container {
+    width: 600px;
+}
+.about-desk {
+    /* margin: 0px 0px 15px; */
+    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+}
+.about-right {
+    flex-grow: 4;
+}
+.horizontal-bar {
+    width: 300px;
+    height: 1px;
+    background-color: #737479; /* You can change the color as needed */
+    margin: 25px 0; /* Optional: Adds some space above and below the bar */
+}
+
+.about-image {
+    border: 5px solid #000307;
+    opacity: 0.9;
+    width: 300px;
+    height: 350px;
+    margin-left: 50px;
+    margin-top: 60px;
+    transition: width  3s;
+
+}
+
+
+.about-image:hover {
+    width: 350px;
+    opacity: 0.2;
+}
+
+.tools {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+@media  (max-width:1075px) {
+    .container {
+        padding-top: 60px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    .about-me {
+        font-size: 25px;
+        font-family: SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    }
+    
+    .about-container {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .left-container {
+        width: 500px;
+    }
+    .about-desk {
+        /* margin: 0px 0px 15px; */
+        font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+    }
+    .about-right {
+        flex-grow: 4;
+    }
+    .horizontal-bar {
+        width: 250px;
+        height: 1px;
+        background-color: #737479; /* You can change the color as needed */
+        margin: 25px 0; /* Optional: Adds some space above and below the bar */
+    }
+    
+    .about-image {
+        border: 5px solid #000307;
+        opacity: 0.9;
+        width: 250px;
+        height: 300px;
+        margin-left: 40px;
+        margin-top: 50px;
+        transition: width  3s;
+    
+    }
+    
+    
+    .about-image:hover {
+        width: 350px;
+        opacity: 0.2;
+    }
+    
+    .tools {
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+        cursor: pointer;
+    }
+}
+
+@media (min-width:768px) and (max-width:1000px) {
+    .social-media {
+        margin-left: 17px;
+    }
+
+    #Hero {
+        padding-left: 30px ;
+    }
+    .big-heading {
+        font-size: 60px;
+    }
+    .big2-heading {
+        font-size: 60px;
+    }
+    #about {
+        padding-left: 30px ;
+    }
+    .about-desk {
+        font-size: medium;
+    }
+}
+
+@media  (max-width:768px) {
+    .col-md-2 {
+        display: none;
+    }
+    .container {
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .about-me {
+        font-size: 18px;
+        font-family: SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    }
+    
+    .about-container {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .left-container {
+        width: 100%;
+    }
+    .about-desk {
+        /* margin: 0px 0px 15px; */
+        font-size: medium;
+        width: 70%;
+    }
+
+    .horizontal-bar {
+        width: 150px;
+        height: 1px;
+        background-color: #737479; /* You can change the color as needed */
+        margin: 15px 0; /* Optional: Adds some space above and below the bar */
+    }
+    
+    .about-image {
+        border: 5px solid #000307;
+        opacity: 0.9;
+        width: 220px;
+        height: 250px;
+        margin-left: 20px;
+        margin-top: 30px;
+        transition: width 3s;
+    }
+    
+    
+    .about-image:hover {
+        width: 250px;
+        opacity: 0.2;
+    }
+    
+    .tools {
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+        cursor: pointer;
+    }
+}
+/* End About */
