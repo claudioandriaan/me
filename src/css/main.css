@@ -483,6 +483,7 @@ section {
 .about-container {
     display: flex;
     gap: 26px;
+    padding-top: 40px;
 }
 
 .left-container {
@@ -755,4 +756,86 @@ dd {
 
 dd {
     margin-bottom: 10px;
+}
+
+
+/* Contact */
+#contact {
+    padding-top: 20px;
+}
+
+.container-contact {
+    display: flex;
+    max-width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.contact-container {
+    display: flex;
+    gap: 26px;
+    margin-top: 40px;
+}
+
+.contact-info {
+    margin-left: 50px;
+}
+
+.contact-info,
+.contact-form {
+    padding: 30px;
+    flex: 1;
+}
+
+.contact-info h2 {
+    margin-top: 0;
+}
+
+.contact-form h2 {
+    margin-top: 0;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.contact-form button {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    background-color: #3c978d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #3c978d;
+}
+
+.contact-icon {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
 }
