@@ -187,6 +187,18 @@ ul li a:hover {
     }
 }
 
+.enterprise {
+    color: #3c978d;
+    list-style: none;
+    text-decoration: none;
+}
+
+.enterprise:hover {
+    color: #5cebda;
+    list-style: none;
+    text-decoration: none;
+}
+
 /* Landing Page */
 section {
     height: 100vh;
