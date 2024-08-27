@@ -41,3 +41,33 @@ function showDescription(element) {
     document.getElementById(descriptionId).classList.add('active');
 
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const showMoreBtn = document.getElementById("showMoreBtn");
+    const showLessBtn = document.getElementById("showLessBtn");
+    const sectionPage = document.getElementById("work");
+  
+    if (showMoreBtn && showLessBtn) {
+        showMoreBtn.addEventListener("click", function() {
+            const hiddenItems = document.querySelectorAll(".project-card.hidden");
+            hiddenItems.forEach(item => {
+                item.classList.remove("hidden");
+            });
+            sectionPage.style.height = "auto"; // Adjust height if necessary
+            showMoreBtn.classList.add("hidden"); // Hide "Show More" button
+            showLessBtn.classList.remove("hidden"); // Show "Show Less" button
+        });
+
+        showLessBtn.addEventListener("click", function() {
+            const allItems = document.querySelectorAll(".project-card");
+            allItems.forEach((item, index) => {
+                if (index >= 4) { // Hide items beyond the initial 3
+                    item.classList.add("hidden");
+                }
+            });
+            sectionPage.style.height = ""; // Reset height if necessary
+            showLessBtn.classList.add("hidden"); // Hide "Show Less" button
+            showMoreBtn.classList.remove("hidden"); // Show "Show More" button
+        });
+    }
+});
