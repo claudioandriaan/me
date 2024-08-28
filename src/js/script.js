@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
         showLessBtn.addEventListener("click", function() {
             const allItems = document.querySelectorAll(".project-card");
             allItems.forEach((item, index) => {
-                if (index >= 4) { // Hide items beyond the initial 3
+                if (index >= 3) { // Hide items beyond the initial 3
                     item.classList.add("hidden");
                 }
             });
@@ -71,3 +71,4 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
