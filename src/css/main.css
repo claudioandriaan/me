@@ -1,3 +1,8 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     width: 100%;
     margin: 0;
@@ -759,12 +764,17 @@ section {
     }
 
     .contact-info {
-        margin-left: 40px;
+        margin-left: 20px;
+        font-size: 13px;
     }
 
     .contact-info,
     .contact-form {
         padding: 10px;
+    }
+
+    .contact-info h2 {
+        margin-bottom: 20px;
     }
 
     dd {
@@ -864,7 +874,9 @@ dd {
 }
 
 .contact-info {
-    margin-left: 50px;
+    padding: 10px;
+    margin-left: 20px;
+    font-size: 13px;
 }
 
 .contact-info,
@@ -875,6 +887,7 @@ dd {
 
 .contact-info h2 {
     margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .contact-form h2 {
