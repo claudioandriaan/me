@@ -989,11 +989,11 @@ dd {
 }
 
 .desc-work {
-    left: 0;
     margin-top: 15px;
     font-style: italic;
     color: #b1b4bf;
     margin-bottom: 20px;
+    margin-left: 13px;
 }
 
 .hidden {
