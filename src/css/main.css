@@ -512,7 +512,12 @@ section {
 }
 
 .about-image {
-    border: 5px solid #000307;
+    /* border-radius: 50%; */
+    /* border: 5px solid #000307; */
+    border-left: 5px solid #061b41;
+    border-right: 7px solid #3c978d;
+    border-top: 5px solid #061b41;
+    border-bottom: 7px solid #3c978d;
     opacity: 0.9;
     width: 300px;
     height: 350px;
